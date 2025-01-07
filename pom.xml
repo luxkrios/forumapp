@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <name>Forum App</name>
-    <description>Forum Application with Spring Boot, PostgreSQL, and Thymeleaf</description>
+    <description>Spring Boot, PostgreSQL ve Thymeleaf ile Forum Uygulaması final proje</description>
 
     <properties>
         <java.version>17</java.version> 
