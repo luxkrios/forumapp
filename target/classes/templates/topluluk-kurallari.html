@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forum topluluk kuralları. Sağlıklı ve saygılı bir ortam için uymanız gereken kurallar.">
+    <title>Topluluk Kuralları - Forum</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .container h2 {
+            color: #2C3E50;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .rules {
+            margin: 20px 0;
+        }
+
+        .rules h3 {
+            font-size: 1.5em;
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+
+        .rules ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        .rules ul li {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            color: #7f8c8d;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #2980b9;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="/forum/topluluk" method="post">
+    <header>
+        <h1>Topluluk Kuralları</h1>
+        <p>Forumumuzda sağlıklı bir ortam sağlamak için bu kurallara uymanız gerekmektedir.</p>
+    </header>
+
+    <div class="container">
+        <h2>Kural Listesi</h2>
+
+        <div class="rules">
+            <h3>1. Saygılı ve Nezaketli Olun</h3>
+            <ul>
+                <li>Diğer üyelere saygılı bir şekilde davranın.</li>
+                <li>Hakaret, aşağılama veya nefret içerikli mesajlardan kaçının.</li>
+                <li>Farklı görüşlere hoşgörülü olun.</li>
+            </ul>
+        </div>
+
+        <div class="rules">
+            <h3>2. Spam ve Reklamdan Kaçının</h3>
+            <ul>
+                <li>Forumda spam içerik veya gereksiz mesajlar paylaşmayın.</li>
+                <li>Forum dışı ürünlerin veya hizmetlerin reklamını yapmayın.</li>
+                <li>Diğer kullanıcıları rahatsız eden ticari veya yanıltıcı içeriklere izin verilmez.</li>
+            </ul>
+        </div>
+
+        <div class="rules">
+            <h3>3. Uygun İçerik Paylaşımı</h3>
+            <ul>
+                <li>Forumun konusuna uygun içerik paylaşmaya özen gösterin.</li>
+                <li>Müstehcen, yasa dışı veya zararlı içerikler kesinlikle yasaktır.</li>
+                <li>Paylaştığınız içeriklerin telif hakkına uygun olduğundan emin olun.</li>
+            </ul>
+        </div>
+
+        <div class="rules">
+            <h3>4. Moderatörlere Saygılı Olun</h3>
+            <ul>
+                <li>Moderatörlerin yönlendirmelerine ve uyarılarına uyun.</li>
+                <li>Kural ihlali durumunda moderatörlerin yaptırımlarını kabul edin.</li>
+            </ul>
+        </div>
+
+        <div class="rules">
+            <h3>5. Özel Bilgi Paylaşımı</h3>
+            <ul>
+                <li>Kendi özel bilgilerinizi paylaşmaktan kaçının.</li>
+                <li>Diğer kullanıcıların kişisel bilgilerini paylaşmayın.</li>
+                <li>Güvenlik ihlallerinden sorumlu olmamak için dikkatli davranın.</li>
+            </ul>
+        </div>
+
+        <a href="/forum/index" class="back-btn">Ana Sayfaya Geri Dön</a>
+    </div>
+
+</body>
+</html>

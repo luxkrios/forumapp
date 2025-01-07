@@ -1,0 +1,10 @@
+com\example\forumapp\service\AuthService.class
+com\example\forumapp\controller\ForumController.class
+com\example\forumapp\repository\UserRepository.class
+com\example\forumapp\model\Post.class
+com\example\forumapp\controller\AuthController.class
+com\example\forumapp\controller\HomeController.class
+com\example\forumapp\ForumappApplication.class
+com\example\forumapp\model\User.class
+com\example\forumapp\service\ForumService.class
+com\example\forumapp\repository\PostRepository.class

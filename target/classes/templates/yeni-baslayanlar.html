@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yeni başlayanlar için forum rehberi. Forumun nasıl çalıştığını öğrenin ve katılın!">
+    <title>Yeni Başlayanlar - Forum Rehberi</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .container h2 {
+            color: #2C3E50;
+            font-size: 2em;
+            margin-bottom: 15px;
+        }
+
+        .container p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #7f8c8d;
+        }
+
+        .container ul {
+            margin-left: 20px;
+            padding-left: 0;
+            list-style-type: disc;
+            color: #34495e;
+        }
+
+        .container ul li {
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #2980b9;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="/forum/yeni" method="post">
+    <header>
+        <h1>Yeni Başlayanlar</h1>
+        <p>Forumda ilk adımlarınızı atın! Rehberimiz size yardımcı olacak.</p>
+    </header>
+
+    <div class="container">
+        <h2>Forumda İlk Adımlar</h2>
+        <p>Forumumuza hoş geldiniz! Burada topluluğumuza katılmak ve forumun temel işleyişini öğrenmek için bilmeniz gereken bazı önemli noktalar bulunmaktadır:</p>
+
+        <ul>
+            <li><strong>Hesap Oluşturun:</strong> Forumda aktif bir şekilde katılım sağlamak için bir hesap oluşturmanız gereklidir.</li>
+            <li><strong>Profilinizi Tamamlayın:</strong> Profil bilgilerinizi güncelleyerek topluluğumuzda kendinizi tanıtabilirsiniz.</li>
+            <li><strong>Forum Kurallarını Okuyun:</strong> Forumda sağlıklı bir iletişim için kurallara uygun davranmanız önemlidir.</li>
+            <li><strong>Konu Açın ve Katkıda Bulunun:</strong> İlginizi çeken konular hakkında soru sorabilir veya diğer kullanıcıların sorularına yanıt verebilirsiniz.</li>
+        </ul>
+
+        <h2>Yardım Alın</h2>
+        <p>Eğer herhangi bir sorunla karşılaşırsanız ya da bir konuda yardıma ihtiyacınız olursa, <strong>Destek</strong> bölümünden bize ulaşabilirsiniz. Topluluğumuz da size yardımcı olmaktan memnuniyet duyacaktır.</p>
+
+        <a href="/forum/index" class="back-btn">Ana Sayfaya Geri Dön</a>
+    </div>
+
+</body>
+</html>

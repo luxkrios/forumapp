@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forum</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        header a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #2980b9;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        header a:hover {
+            background-color: #1f6696;
+        }
+
+        .forum-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .forum-container ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .forum-container li {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .forum-container li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .forum-container h2 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+            color: #2C3E50;
+        }
+
+        .forum-container p {
+            margin: 0 0 10px;
+            line-height: 1.6;
+        }
+
+        .forum-container small {
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Forum</h1>
+        <a href="/forum/create">Yeni Paylaşım Yap</a>
+    </header>
+
+    <div class="forum-container">
+        <ul>
+            <li th:each="post : ${posts}">
+                <h2 th:text="${post.title}">Başlık</h2>
+                <p th:text="${post.content}">Paylaşım içeriği burada görünecek.</p>
+                <small th:text="'Yazar: ' + ${post.author}">Yazar bilgisi</small>
+            </li>
+        </ul>
+    </div>
+
+</body>
+</html>

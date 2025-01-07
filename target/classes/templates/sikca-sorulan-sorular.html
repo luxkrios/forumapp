@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Forumla ilgili sıkça sorulan sorular ve cevaplar. Forum kullanımı hakkında bilgi alın.">
+    <title>Sıkça Sorulan Sorular - Forum</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .container h2 {
+            color: #2C3E50;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .faq {
+            margin-bottom: 20px;
+        }
+
+        .faq h3 {
+            font-size: 1.5em;
+            color: #3498db;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .faq h3:hover {
+            color: #2980b9;
+        }
+
+        .faq p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin: 10px 0 0;
+            color: #7f8c8d;
+            display: none; 
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .back-btn:hover {
+            background-color: #2980b9;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            header h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="/forum/sikca" method="post">
+    <header>
+        <h1>Sıkça Sorulan Sorular</h1>
+        <p>Forum kullanımıyla ilgili sık sorulan sorular ve cevaplar.</p>
+    </header>
+
+    <div class="container">
+        <h2>Forum Kullanımı Hakkında Sorular</h2>
+
+        <div class="faq">
+            <h3>1. Forumda nasıl hesap oluşturabilirim?</h3>
+            <p>Forumda hesap oluşturmak için ana sayfada bulunan "Kayıt Ol" butonuna tıklayın ve gerekli bilgileri doldurun. Kayıt işlemi tamamlandıktan sonra e-posta doğrulaması yapmanız gerekebilir.</p>
+        </div>
+
+        <div class="faq">
+            <h3>2. Forumda nasıl konu açabilirim?</h3>
+            <p>Hesabınıza giriş yaptıktan sonra ilginizi çeken bir kategoriye giderek "Yeni Konu" butonuna tıklayın. Konu başlığı ve içeriğini doldurduktan sonra gönder butonuna basabilirsiniz.</p>
+        </div>
+
+        <div class="faq">
+            <h3>3. Forum kurallarını nereden öğrenebilirim?</h3>
+            <p>Forum kuralları, ana sayfadaki "Topluluk Kuralları" sekmesinde yer almaktadır. Tüm kullanıcıların bu kurallara uyması beklenir.</p>
+        </div>
+
+        <div class="faq">
+            <h3>4. Forumda nasıl bir moderatöre ulaşabilirim?</h3>
+            <p>Moderatörlere ulaşmak için destek bölümünü ziyaret edebilir veya özel mesaj yoluyla iletişim kurabilirsiniz. Moderatörler kullanıcıların sorularını yanıtlamak ve sorunları çözmek için buradadır.</p>
+        </div>
+
+        <div class="faq">
+            <h3>5. Hesabımı nasıl silebilirim?</h3>
+            <p>Hesabınızı silmek için profil ayarlarınıza gidin ve "Hesabı Sil" seçeneğini seçin. Hesabınızın tamamen silinmesi için destek ekibine de başvurmanız gerekebilir.</p>
+        </div>
+
+        <a href="/forum/index" class="back-btn">Ana Sayfaya Geri Dön</a>
+    </div>
+
+    <script>
+        document.querySelectorAll('.faq h3').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+
+</body>
+</html>

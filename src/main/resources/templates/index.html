@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bir forum sitesi, toplulukların etkileşimde bulunabileceği güvenli bir alan.">
+    <title>Forum - Hoşgeldiniz</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #2C3E50;
+            color: #fff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-buttons a {
+            text-decoration: none;
+            font-size: 1em;
+            padding: 10px 20px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-buttons a.login {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .nav-buttons a.login:hover {
+            background-color: #2980b9;
+        }
+
+        .nav-buttons a.register {
+            background-color: white;
+            color: #3498db;
+            border: 2px solid #3498db;
+        }
+
+        .nav-buttons a.register:hover {
+            background-color: #ecf0f1;
+            border-color: #2980b9;
+            color: #2980b9;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .info-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            width: 30%;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .info-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .info-card h2 {
+            font-size: 2em;
+            color: #2C3E50;
+        }
+
+        .info-card p {
+            font-size: 1.1em;
+            color: #7f8c8d;
+        }
+
+        .info-card a {
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .info-card a:hover {
+            color: #2980b9;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            .info-card {
+                width: 100%;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .nav-buttons {
+                margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form action="/forum/index" method="post">
+    <header>
+        <h1>Forum</h1>
+        <div class="nav-buttons">
+            <a href="/auth/login" class="login">Giriş Yap</a>
+            <a href="/auth/register" class="register">Kayıt Ol</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="info-card">
+            <h2><a href="/forum/yeni">Yeni Başlayanlar</a></h2>
+            <p>Forumun nasıl çalıştığını ve nasıl katkı sağlayabileceğinizi öğrenin.</p>
+        </div>
+
+        <div class="info-card">
+            <h2><a href="/forum/sikca">Sıkça Sorulan Sorular</a></h2>
+            <p>Forumla ilgili sıkça sorulan soruları gözden geçirin ve sorularınıza hızlıca cevap bulun.</p>
+        </div>
+
+        <div class="info-card">
+            <h2><a href="/forum/topluluk">Topluluk Kuralları</a></h2>
+            <p>Forumda sağlıklı bir etkileşim için uyulması gereken kurallar.</p>
+        </div>
+    </div>
+
+</body>
+</html>

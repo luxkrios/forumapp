@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap - Forum</title>
+    <style>
+        /* Genel Stil Ayarları */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Form Konteyneri */
+        .form-container {
+            width: 100%;
+            max-width: 400px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .form-container h1 {
+            text-align: center;
+            color: #2C3E50;
+            margin-bottom: 20px;
+        }
+
+        /* Form Elemanları */
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #2C3E50;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        form input:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        form button:hover {
+            background-color: #2980b9;
+        }
+
+        /* Bağlantılar */
+        .links {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: #3498db;
+            font-size: 0.9em;
+        }
+
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Mesajlar */
+        .message {
+            text-align: center;
+            font-size: 1em;
+            margin-top: 15px;
+        }
+
+        .message.success {
+            color: green;
+        }
+
+        .message.error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Giriş Yap</h1>
+        <form action="/auth/login" method="post">
+            <label for="username">Kullanıcı Adı veya E-posta:</label>
+            <input type="text" id="username" name="username" placeholder="Kullanıcı adınızı veya e-posta adresinizi girin" required>
+            
+            <label for="password">Şifre:</label>
+            <input type="password" id="password" name="password" placeholder="Şifrenizi girin" required>
+            
+            <button type="submit">Giriş Yap</button>
+        </form>
+
+        <div class="links">
+            <a href="/auth/register">Hesap oluştur</a>
+        </div>
+
+        <div class="message success" th:if="${success}" th:text="${success}"></div>
+
+        <div class="message error" th:if="${error}" th:text="${error}"></div>
+    </div>
+
+</body>
+</html>
